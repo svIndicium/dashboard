@@ -1,23 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ES2020",
+    "target": "ES2018",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
-      "DOM",
-      "DOM.Iterable"
+      "DOM"
     ],
     "esModuleInterop": true,
-    "allowJs": false,
+    "allowJs": true,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
@@ -32,7 +28,6 @@
       "@nuxtjs/axios",
       "@types/node",
       "vuetify/types",
-      "@nuxtjs/i18n",
       "./@types"
     ]
   },

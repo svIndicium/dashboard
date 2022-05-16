@@ -118,6 +118,38 @@ const config: Omit<NuxtConfig, "env"> = {
     }
   },
 
+  i18n: {
+    defaultLocale: "nl-NL",
+    langDir: "i18n/",
+    lazy: true,
+    locales: [
+      {
+        code: "nl-NL",
+        iso: "nl-NL",
+        file: "nl-Nl.ts"
+      }
+    ],
+    vueI18n: {
+      fullbackLocale: "nl-NL",
+      silentFallbackWarn: true,
+      dateTimeFormats: {
+        "nl-NL": {
+          short: {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          },
+          full: {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            weekday: "long"
+          }
+        }
+      }
+    }
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [
