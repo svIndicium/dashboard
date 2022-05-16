@@ -16,6 +16,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: "/config.js", defer: false }
     ]
   },
 
@@ -25,6 +28,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+      "plugins/filters",
+      "plugins/api-clients",
+      "plugins/event-bus"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,9 +47,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    "@nuxtjs/i18n",
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -78,7 +83,42 @@ export default {
     }
   },
 
+  i18n: {
+    defaultLocale: "nl-NL",
+    langDir: "i18n/",
+    lazy: true,
+    locales: [
+      {
+        code: "nl-NL",
+        iso: "nl-NL",
+        file: "nl-Nl.ts"
+      }
+    ],
+    vueI18n: {
+      fullbackLocale: "nl-NL",
+      silentFallbackWarn: true,
+      dateTimeFormats: {
+        "nl-NL": {
+          short: {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          },
+          full: {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            weekday: "long"
+          }
+        }
+      }
+    }
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+        "lodash-es"
+    ]
   }
 }
