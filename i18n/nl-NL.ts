@@ -3,6 +3,10 @@ export default {
         full: "Studievereniging Indicium",
         short: "Indicium"
     },
+    general: {
+        yes: "ja",
+        no: "nee"
+    },
     enums: {},
     layout: {
         header: {
