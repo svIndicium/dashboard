@@ -1,9 +1,15 @@
-export default {
+import { merge } from "lodash-es"
+
+import baseTranslations from "@svindicium/indicium-components/i18n/nl-NL"
+
+const translations = {
     name: {
         full: "Studievereniging Indicium",
         short: "Indicium"
     },
     general: {
+        username: "Gebruikersnaam",
+        password: "Wachtwoord",
         yes: "ja",
         no: "nee"
     },
@@ -26,5 +32,19 @@ export default {
                 }
             }
         }
+    },
+    pages: {
+        login: {
+            title: "Inloggen",
+            subtitle: "Log hier in met jouw Indicium account",
+            alerts: {
+                loginFailed: "Inloggen mislukt, probeer opnieuw"
+            },
+            buttons: {
+                login: "Inloggen"
+            }
+        }
     }
 }
+
+export default merge(baseTranslations, translations)

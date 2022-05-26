@@ -1,5 +1,6 @@
 import { NuxtConfig } from "@nuxt/types"
 import colors from "vuetify/lib/util/colors"
+import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin"
 
 const config: Omit<NuxtConfig, "env"> = {
   // Target: https://go.nuxtjs.dev/config-target
@@ -35,15 +36,13 @@ const config: Omit<NuxtConfig, "env"> = {
       "plugins/event-bus"
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify"
+    "@nuxtjs/vuetify",
+    "@nuxtjs/eslint-module"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -70,7 +69,7 @@ const config: Omit<NuxtConfig, "env"> = {
   vuetify: {
     treeShake: true,
     theme: {
-      dark: false,
+      dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -119,9 +118,19 @@ const config: Omit<NuxtConfig, "env"> = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    standalone: true,
+    parallel: true,
+    cache: true,
+    hardSource: true,
+    components: false,
     transpile: [
         "lodash-es"
-    ]
+    ],
+    extend(webpackConfig: any, _ctz: any): void {
+      webpackConfig.resolve!.plugins = [
+        new TsconfigPathsPlugin()
+      ]
+    }
   }
 }
 

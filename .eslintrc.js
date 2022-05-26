@@ -5,10 +5,14 @@ module.exports = {
     node: true
   },
   rules: {
+    "vue/html-indent": ["warn", "tab"],
     "object-curly-spacing": "error",
     curly: "error",
     quotes: ["warn", "double"],
-    indent: "off"
+    indent: "off",
+    "space-before-function-paren": "off",
+    "no-tabs": "off",
+    "no-mixed-spaces-and-tabs": "off"
   },
   extends: [
     "@nuxtjs/eslint-config-typescript",
