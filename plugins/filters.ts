@@ -1,8 +1,8 @@
-import Vue from "vue";
+import Vue from "vue"
 
-import { Context } from "@nuxt/types";
+import { Context } from "@nuxt/types"
 
-import { isDate, isNumber } from "lodash-es";
+import { isDate, isNumber } from "lodash-es"
 
 export enum Filters {
     LOCALE = "locale",
@@ -17,4 +17,3 @@ export default ({ app }: Context): void => {
     Vue.filter(Filters.FULL_DATE, (value: number | Date) => isDate(value) || isNumber(value) ? app.i18n.d(value, "full") : "")
     Vue.filter(Filters.CAPITALIZE, (value: string) => value.charAt(0).toUpperCase() + value.substring(1))
 }
-    

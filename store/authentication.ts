@@ -27,7 +27,7 @@ export const getters: GetterTree<AuthenticationState, RootState> = {
 export const mutations: MutationTree<AuthenticationState> = {}
 
 export const actions: ActionTree<AuthenticationState, RootState> = {
-    async [AUTHENTICATION_ACTIONS.LOGIN]({ commit }, credentials: LoginCredentials): Promise<void> {
+    async [AUTHENTICATION_ACTIONS.LOGIN](_, credentials: LoginCredentials): Promise<void> {
         await authenticationClient.login(credentials)
     }
 }

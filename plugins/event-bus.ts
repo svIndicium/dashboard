@@ -1,6 +1,6 @@
-import {Context} from "@nuxt/types";
-import Vue from "vue";
+import { Context } from "@nuxt/types"
+import Vue from "vue"
 
-export default ({ app }: Context): void => {
+export default (_: Context): void => {
     Vue.prototype.$eventBus = new Vue()
 }
