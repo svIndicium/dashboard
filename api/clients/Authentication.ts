@@ -1,5 +1,5 @@
-import {EndGateway} from "~/api/request/EndGateway";
-import {LoginCredentials, Token} from "~/api/models/authentication";
+import { EndGateway } from "~/api/request/EndGateway"
+import { LoginCredentials, Token } from "~/api/models/authentication"
 
 export class AuthenticationClient {
     static readonly NAME = "authenticationClient"
@@ -17,7 +17,7 @@ export class AuthenticationClient {
     }
 
     async login(credentials: LoginCredentials): Promise<Token> {
-        const response = await this.gateway.postOpen(`${ this.authenticationRootUrl }/login`, credentials)
+        const response = await this.gateway.postOpen(`${this.authenticationRootUrl}/login`, credentials)
 
         return await response.data
     }

@@ -1,7 +1,7 @@
-import {AuthorizedAxiosGateway} from "~/api/request/AuthorizedAxiosGateway";
-import Gateway from "~/api/request/Gateway";
-import {Parameters, RequestMethod, RequestOptions} from "~/api/request/index";
-import {AxiosResponse} from "axios";
+import { AxiosResponse } from "axios"
+import { AuthorizedAxiosGateway } from "~/api/request/AuthorizedAxiosGateway"
+import Gateway from "~/api/request/Gateway"
+import { Parameters, RequestMethod, RequestOptions } from "~/api/request/index"
 
 export class EndGateway {
     private readonly authorizedGateway: AuthorizedAxiosGateway
@@ -14,7 +14,7 @@ export class EndGateway {
     }
 
     async request(method: RequestMethod, resource: string, data?: Parameters, options?: RequestOptions): Promise<AxiosResponse> {
-        return this.authorizedGateway.request(method, resource, data, options).response.then(response => {
+        return this.authorizedGateway.request(method, resource, data, options).response.then((response) => {
             if (response.status !== 200) {
                 throw response
             }

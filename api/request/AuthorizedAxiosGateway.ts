@@ -1,3 +1,4 @@
+import Vue from "vue"
 import {
     AuthenticationState,
     Parameters,
@@ -5,13 +6,11 @@ import {
     RequestHeader,
     RequestMethod,
     RequestOptions
-} from "~/api/request/index";
-import Gateway from "~/api/request/Gateway";
-import Vue from "vue";
-import {AuthenticationClient} from "~/api/clients/Authentication";
+} from "~/api/request/index"
+import Gateway from "~/api/request/Gateway"
+import { AuthenticationClient } from "~/api/clients/Authentication"
 
 export class AuthorizedAxiosGateway implements Gateway {
-
     constructor(private gateway: Gateway,
                 private storage: Storage) {
     }
@@ -22,18 +21,18 @@ export class AuthorizedAxiosGateway implements Gateway {
                 ...options,
                 headers: {
                     ...options.headers,
-                    [RequestHeader.AUTHORIZATION]: `Bearer ${ this.getToken() }`
+                    [RequestHeader.AUTHORIZATION]: `Bearer ${this.getToken()}`
                 }
             }
             : {
                 headers: {
-                    [RequestHeader.AUTHORIZATION]: `Bearer ${ this.getToken() }`
+                    [RequestHeader.AUTHORIZATION]: `Bearer ${this.getToken()}`
                 }
             }
         const request = this.gateway.request(method, resource, data, optionOverride)
         return {
             ...request,
-            response: request.response.then(response => {
+            response: request.response.then((response) => {
                 switch (response.status) {
                     case 401:
                         Vue.prototype.$eventBus.emit(AuthenticationState.AUTHORIZATION_FAILED)

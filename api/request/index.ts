@@ -1,5 +1,4 @@
-import {AxiosRequestConfig, AxiosResponse} from "axios";
-
+import { AxiosRequestConfig, AxiosResponse } from "axios"
 
 export enum RequestMethod {
     GET = "GET",
