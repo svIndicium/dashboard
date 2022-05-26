@@ -92,7 +92,7 @@ const config: Omit<NuxtConfig, "env"> = {
       {
         code: "nl-NL",
         iso: "nl-NL",
-        file: "nl-Nl.ts"
+        file: "nl-NL.ts"
       }
     ],
     vueI18n: {
