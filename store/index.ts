@@ -1,4 +1,4 @@
-import type { ActionTree, GetterTree, MutationTree } from "vuex";
+import type { ActionTree, GetterTree, MutationTree } from "vuex"
 
 export type StoreMutations<T> = (payload?: T) => void
 

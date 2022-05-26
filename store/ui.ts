@@ -1,7 +1,7 @@
-import {ActionTree, GetterTree, MutationTree} from "vuex";
+import { ActionTree, GetterTree, MutationTree } from "vuex"
 
-import {RootState} from "~/store/index";
-import {SidebarItem} from "~/components/ui/layout";
+import { RootState } from "~/store/index"
+import { SidebarItem } from "~/components/ui/layout"
 
 export enum UI_GETTERS {
     MENU_ITEMS = "MENU_ITEMS"

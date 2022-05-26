@@ -1,5 +1,5 @@
-import type { ActionTree, GetterTree, MutationTree } from "vuex";
-import {RootState} from "~/store/index";
+import type { ActionTree, GetterTree, MutationTree } from "vuex"
+import { RootState } from "~/store/index"
 
 import { Event } from "~/api/models/event"
 
