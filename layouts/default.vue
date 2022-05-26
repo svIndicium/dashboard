@@ -1,12 +1,14 @@
 <template>
 	<v-app dark>
-		<Header />
+		<Header @openSideBar="openSideBar" />
 		<v-main>
 			<v-container>
 				<Nuxt />
 			</v-container>
 		</v-main>
-		<SideBar />
+		<SideBar
+			:show-side-bar.sync="sideBarOpen"
+		/>
 	</v-app>
 </template>
 
@@ -23,5 +25,10 @@
 	}
 })
 export default class Default extends Vue {
+	sideBarOpen = false
+
+	openSideBar(): void {
+		this.sideBarOpen = !this.sideBarOpen
+	}
 }
 </script>
