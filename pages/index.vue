@@ -1,7 +1,7 @@
 <template>
 	<v-row>
-		<IWelcomeWidget></IWelcomeWidget>
-		<IComingEventsWidget></IComingEventsWidget>
+		<IWelcomeWidget />
+		<IComingEventsWidget />
 	</v-row>
 </template>
 
