@@ -31,7 +31,7 @@
 	const eventModule = namespace(Namespaces.EVENT)
 
 	@Component
-	export default class IComingEventsWidget extends Vue {
+	export default class ComingEventsWidget extends Vue {
 		@eventModule.Getter(EVENT_GETTERS.ALL_EVENTS) events!: Array<Event>
 
 		readonly baseTranslationKey = "layout.dashboard.widgets.comingEvents"

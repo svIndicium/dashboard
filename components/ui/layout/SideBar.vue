@@ -34,7 +34,7 @@
 	const uiModule = namespace(Namespaces.UI)
 
 	@Component
-	export default class ISideBar extends Vue {
+	export default class SideBar extends Vue {
 		@uiModule.Getter(UI_GETTERS.MENU_ITEMS) items!: Array<SidebarItem>
 
 		readonly baseTranslationKey = "layout.sidebar"

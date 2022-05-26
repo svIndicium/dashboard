@@ -16,7 +16,7 @@
 	import Component from "vue-class-component"
 
 	@Component
-	export default class IHeader extends Vue {
+	export default class Header extends Vue {
 		readonly baseTranslationKey = "layout.header"
 	}
 </script>

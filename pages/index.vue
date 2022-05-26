@@ -1,20 +1,20 @@
 <template>
 	<v-row>
-		<IWelcomeWidget />
-		<IComingEventsWidget />
+		<WelcomeWidget />
+		<ComingEventsWidget />
 	</v-row>
 </template>
 
 <script lang="ts">
 	import Vue from "vue"
 	import Component from "vue-class-component"
-	import IWelcomeWidget from "~/components/ui/dashboard/widget/IWelcomeWidget.vue"
-	import IComingEventsWidget from "~/components/ui/dashboard/widget/IComingEventsWidget.vue"
+	import WelcomeWidget from "~/components/ui/dashboard/widget/WelcomeWidget.vue"
+	import ComingEventsWidget from "~/components/ui/dashboard/widget/ComingEventsWidget.vue"
 
 	@Component({
 		components: {
-			IComingEventsWidget,
-			IWelcomeWidget
+			ComingEventsWidget,
+			WelcomeWidget
 		}
 	})
 	export default class Index extends Vue {

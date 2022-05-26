@@ -16,7 +16,7 @@
 	const userModule = namespace(Namespaces.USER)
 
 	@Component
-	export default class IWelcomeWidget extends Vue {
+	export default class WelcomeWidget extends Vue {
 		@userModule.Getter(USER_GETTERS.FULL_NAME) name!: string
 
 		readonly baseTranslationKey = "layout.dashboard.widgets.welcome"
