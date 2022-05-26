@@ -1,7 +1,7 @@
 import type { ActionTree, GetterTree, MutationTree } from "vuex"
+import { LoginCredentials } from "@svindicium/indicium-components/api/models/authentication"
+import { authenticationClient } from "@svindicium/indicium-components/api"
 import { RootState } from "~/store/index"
-import { LoginCredentials } from "~/api/models/authentication"
-import { authenticationClient } from "~/api"
 
 export enum AUTHENTICATION_GETTERS {
 }

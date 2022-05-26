@@ -1,7 +1,7 @@
 import type { ActionTree, GetterTree, MutationTree } from "vuex"
-import { RootState } from "~/store/index"
 
-import { Event } from "~/api/models/event"
+import { Event } from "@svindicium/indicium-components/api/models/event"
+import { RootState } from "~/store/index"
 
 export enum EVENT_GETTERS {
     ALL_EVENTS = "ALL_EVENTS"

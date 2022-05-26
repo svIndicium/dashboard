@@ -28,7 +28,8 @@
       "@nuxtjs/axios",
       "@types/node",
       "vuetify/types",
-      "./@types"
+      "./@types",
+      "@svindicium/indicium-components/@types"
     ]
   },
   "exclude": [

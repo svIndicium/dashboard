@@ -57,11 +57,11 @@
 
 	import { ObjectRules, ObjectErrors } from "@svindicium/general-lib/validation"
 	import validator from "@svindicium/general-lib/validation/validator"
+	import { LoginCredentials } from "@svindicium/indicium-components/api/models/authentication"
 	import { isNull } from "lodash-es"
 	import { Watch } from "vue-property-decorator"
 	import { Namespaces } from "~/store/configuration"
 	import { AUTHENTICATION_ACTIONS } from "~/store/authentication"
-	import { LoginCredentials } from "~/api/models/authentication"
 	import type { StoreAction } from "~/store"
 
 	type LoginCredentialsTouchedState = {

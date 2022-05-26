@@ -13,7 +13,8 @@ module.exports = {
     "space-before-function-paren": "off",
     "no-tabs": "off",
     "no-mixed-spaces-and-tabs": "off",
-    "no-useless-constructor": "off"
+    "no-useless-constructor": "off",
+    "template-curly-spacing": "off"
   },
   extends: [
     "@nuxtjs/eslint-config-typescript",
