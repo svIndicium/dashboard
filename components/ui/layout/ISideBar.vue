@@ -1,16 +1,16 @@
 <template>
 	<v-navigation-drawer
-			clipped
-			fixed
-			app
+		clipped
+		fixed
+		app
 	>
 		<v-list>
 			<v-list-item
-					v-for="(item, i) in items"
-					:key="i"
-					:to="item.to"
-					router
-					exact
+				v-for="(item, i) in items"
+				:key="i"
+				:to="item.to"
+				router
+				exact
 			>
 				<v-list-item-action>
 					<v-icon>mdi-{{ item.icon }}</v-icon>
@@ -24,12 +24,12 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
-	import {namespace} from "vuex-class";
-	import {Namespaces} from "~/store/configuration";
-	import {UI_GETTERS} from "~/store/ui";
-	import {SidebarItem} from "~/components/ui/layout/index";
+	import Vue from "vue"
+	import Component from "vue-class-component"
+	import { namespace } from "vuex-class"
+	import { Namespaces } from "~/store/configuration"
+	import { UI_GETTERS } from "~/store/ui"
+	import { SidebarItem } from "~/components/ui/layout/index"
 
 	const uiModule = namespace(Namespaces.UI)
 
@@ -44,4 +44,3 @@
 <style scoped lang="scss">
 
 </style>
-

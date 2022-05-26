@@ -12,7 +12,7 @@
 				>
 					<v-list-item-content>
 						<v-list-item-title>{{ event.title }}</v-list-item-title>
-						<v-list-item-subtitle>{{ event.startDateTime | fullDate | capitalize}}</v-list-item-subtitle>
+						<v-list-item-subtitle>{{ event.startDateTime | fullDate | capitalize }}</v-list-item-subtitle>
 					</v-list-item-content>
 				</v-list-item>
 			</v-card-text>
@@ -21,11 +21,11 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
-	import {namespace} from "vuex-class";
-	import {Namespaces} from "~/store/configuration";
-	import {EVENT_GETTERS} from "~/store/event";
+	import Vue from "vue"
+	import Component from "vue-class-component"
+	import { namespace } from "vuex-class"
+	import { Namespaces } from "~/store/configuration"
+	import { EVENT_GETTERS } from "~/store/event"
 	import { Event } from "~/api/models/event"
 
 	const eventModule = namespace(Namespaces.EVENT)

@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<v-app-bar
-				clipped-left
-				fixed
-				app
+			clipped-left
+			fixed
+			app
 		>
 			<v-toolbar-title>{{ `${ baseTranslationKey }.title` | locale }}</v-toolbar-title>
 			<v-spacer />
@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
+	import Vue from "vue"
+	import Component from "vue-class-component"
 
 	@Component
 	export default class IHeader extends Vue {

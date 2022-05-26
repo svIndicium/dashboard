@@ -14,12 +14,11 @@ export class EndGateway {
     }
 
     async request(method: RequestMethod, resource: string, data?: Parameters, options?: RequestOptions): Promise<AxiosResponse> {
-        return this.authorizedGateway.request(method, resource, data, options).response.then((response) => {
-            if (response.status !== 200) {
-                throw response
-            }
-            return response
-        })
+        const response = await this.authorizedGateway.request(method, resource, data, options).response
+        if (response.status !== 200) {
+            throw response
+        }
+        return response
     }
 
     get(resource: string, data?: Parameters, options?: RequestOptions): Promise<AxiosResponse> {

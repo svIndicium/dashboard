@@ -7,11 +7,11 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
-	import {namespace} from "vuex-class";
-	import {Namespaces} from "~/store/configuration";
-	import {USER_GETTERS} from "~/store/user";
+	import Vue from "vue"
+	import Component from "vue-class-component"
+	import { namespace } from "vuex-class"
+	import { Namespaces } from "~/store/configuration"
+	import { USER_GETTERS } from "~/store/user"
 
 	const userModule = namespace(Namespaces.USER)
 
