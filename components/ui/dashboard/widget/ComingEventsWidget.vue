@@ -24,9 +24,9 @@
 	import Vue from "vue"
 	import Component from "vue-class-component"
 	import { namespace } from "vuex-class"
+	import { Event } from "@svindicium/indicium-components/api/models/event"
 	import { Namespaces } from "~/store/configuration"
 	import { EVENT_GETTERS } from "~/store/event"
-	import { Event } from "~/api/models/event"
 
 	const eventModule = namespace(Namespaces.EVENT)
 
