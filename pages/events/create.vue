@@ -177,7 +177,7 @@
 					path: "/events"
 				})
 			} catch (e) {
-				console.log(e)
+				// pass
 			} finally {
 				this.loading = false
 			}

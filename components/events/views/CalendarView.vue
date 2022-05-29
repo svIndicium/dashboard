@@ -62,9 +62,7 @@
 			}))
 		}
 
-		intervalFormatter(timestamp: any, something: any) {
-			console.log(timestamp)
-			console.log(something)
+		intervalFormatter(timestamp: any, _something: any) {
 			return timestamp.time
 		}
 	}
