@@ -55,11 +55,11 @@
 
 	import { LoginCredentials } from "@svindicium/components/api/models/authentication"
 
-	import ITextInput from "@svindicium/components/components/ui/input/ITextInput.vue"
-	import IPasswordInput from "@svindicium/components/components/ui/input/IPasswordInput.vue"
-	import IButton from "@svindicium/components/components/ui/IButton.vue"
-	import IAlert from "@svindicium/components/components/ui/IAlert.vue"
-	import { AlertType } from "@svindicium/components/components/ui"
+	import ITextInput from "@svindicium/components/ui/input/ITextInput.vue"
+	import IPasswordInput from "@svindicium/components/ui/input/IPasswordInput.vue"
+	import IButton from "@svindicium/components/ui/IButton.vue"
+	import IAlert from "@svindicium/components/ui/IAlert.vue"
+	import { AlertType } from "@svindicium/components/ui"
 
 	import { isNull } from "lodash-es"
 

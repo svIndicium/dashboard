@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<CalendarView></CalendarView>
+		<CalendarView />
 	</div>
 </template>
 
@@ -16,6 +16,7 @@
 	import { EVENT_GETTERS } from "~/store/event"
 
 	const eventModule = namespace(Namespaces.EVENT)
+
 	@Component({
 		components: { CalendarView }
 	})

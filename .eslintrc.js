@@ -38,7 +38,7 @@ module.exports = {
         { name: "Components: Store", match: "^@svindicium/components/store", order: 30 },
         { name: "Components: Models", match: "^@svindicium/components/api/models", order: 40 },
         { name: "Components: API", match: "^@svindicium/components/api", order: 50 },
-        { name: "Components: Components", match: "^@svindicium/components/components", order: 60 },
+        { name: "Components: UI Components", match: "^@svindicium/components/ui", order: 60 },
         { name: "Components: Utils", match: "^@svindicium/components/utils", order: 70 },
         { name: "Store", match: "^store", order: 80 },
         { name: "API", match: "^api", order: 90 },

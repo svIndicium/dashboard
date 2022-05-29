@@ -29,7 +29,7 @@
       "@types/node",
       "vuetify/types",
       "./@types",
-      "@svindicium/indicium-components/@types"
+      "@svindicium/components/@types"
     ]
   },
   "exclude": [
