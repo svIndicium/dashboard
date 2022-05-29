@@ -52,6 +52,7 @@
 
 	import validator from "@svindicium/lib/validation/validator"
 	import { ObjectRules, ObjectErrors } from "@svindicium/lib/validation"
+	import { TouchedState } from "@svindicium/lib/types/forms"
 
 	import { LoginCredentials } from "@svindicium/components/api/models/authentication"
 
@@ -66,10 +67,6 @@
 	import { Namespaces } from "~/store/configuration"
 	import { AUTHENTICATION_ACTIONS } from "~/store/authentication"
 	import type { StoreAction } from "~/store"
-
-	type LoginCredentialsTouchedState = {
-		-readonly [key in keyof LoginCredentials]: Boolean
-	}
 
 	const authenticationModule = namespace(Namespaces.AUTHENTICATION)
 
@@ -95,7 +92,7 @@
 			password: ""
 		}
 
-		touchedState: LoginCredentialsTouchedState = {
+		touchedState: TouchedState<LoginCredentials> = {
 			username: false,
 			password: false
 		}

@@ -25,7 +25,12 @@
 				v-model="value"
 				:weekdays="[1, 2, 3, 4, 5, 6, 0]"
 				:events="events"
-			/>
+				:interval-format="intervalFormatter"
+			>
+				<template #interval>
+					hoi
+				</template>
+			</v-calendar>
 		</v-sheet>
 	</v-container>
 </template>
@@ -55,6 +60,12 @@
 				start: event.startDateTime,
 				end: event.endDateTime
 			}))
+		}
+
+		intervalFormatter(timestamp: any, something: any) {
+			console.log(timestamp)
+			console.log(something)
+			return timestamp.time
 		}
 	}
 </script>

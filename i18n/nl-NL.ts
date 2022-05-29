@@ -43,6 +43,15 @@ const translations = {
             buttons: {
                 login: "Inloggen"
             }
+        },
+        events: {
+            create: {
+                title: "Naam van de activiteit",
+                description: "Beschrijving van de activiteit",
+                slug: "Unieke activiteitsnaam",
+                startDateTime: "Start van de activiteit",
+                endDateTime: "Eind van de activiteit"
+            }
         }
     }
 }

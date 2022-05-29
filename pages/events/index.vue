@@ -1,6 +1,17 @@
 <template>
 	<div>
 		<CalendarView />
+		<v-btn
+			fab
+			fixed
+			bottom
+			right
+			@click="createEvent"
+		>
+			<v-icon>
+				mdi-plus
+			</v-icon>
+		</v-btn>
 	</div>
 </template>
 
@@ -22,6 +33,10 @@
 	})
 	export default class EventsIndex extends Vue {
 		@eventModule.Getter(EVENT_GETTERS.ALL_EVENTS) events!: Array<Event>
+
+		async createEvent(): Promise<void> {
+			await this.$router.push({ path: "/events/create" })
+		}
 	}
 </script>
 
