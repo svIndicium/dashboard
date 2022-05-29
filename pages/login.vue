@@ -48,18 +48,21 @@
 	import Vue from "vue"
 	import Component from "vue-class-component"
 	import { namespace } from "vuex-class"
-
-	import ITextInput from "@svindicium/indicium-components/components/ui/input/ITextInput.vue"
-	import IPasswordInput from "@svindicium/indicium-components/components/ui/input/IPasswordInput.vue"
-	import IButton from "@svindicium/indicium-components/components/ui/IButton.vue"
-	import IAlert from "@svindicium/indicium-components/components/ui/IAlert.vue"
-	import { AlertType } from "@svindicium/indicium-components/components/ui"
-
-	import { ObjectRules, ObjectErrors } from "@svindicium/general-lib/validation"
-	import validator from "@svindicium/general-lib/validation/validator"
-	import { LoginCredentials } from "@svindicium/indicium-components/api/models/authentication"
-	import { isNull } from "lodash-es"
 	import { Watch } from "vue-property-decorator"
+
+	import validator from "@svindicium/lib/validation/validator"
+	import { ObjectRules, ObjectErrors } from "@svindicium/lib/validation"
+
+	import { LoginCredentials } from "@svindicium/components/api/models/authentication"
+
+	import ITextInput from "@svindicium/components/components/ui/input/ITextInput.vue"
+	import IPasswordInput from "@svindicium/components/components/ui/input/IPasswordInput.vue"
+	import IButton from "@svindicium/components/components/ui/IButton.vue"
+	import IAlert from "@svindicium/components/components/ui/IAlert.vue"
+	import { AlertType } from "@svindicium/components/components/ui"
+
+	import { isNull } from "lodash-es"
+
 	import { Namespaces } from "~/store/configuration"
 	import { AUTHENTICATION_ACTIONS } from "~/store/authentication"
 	import type { StoreAction } from "~/store"

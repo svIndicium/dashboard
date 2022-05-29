@@ -15,20 +15,21 @@
 <script lang="ts">
 	import Vue from "vue"
 	import Component from "vue-class-component"
+
 	import Header from "~/components/ui/layout/Header.vue"
 	import SideBar from "~/components/ui/layout/SideBar.vue"
 
-@Component({
-	components: {
-		Header,
-		SideBar
-	}
-})
-export default class Default extends Vue {
-	sideBarOpen = false
+	@Component({
+		components: {
+			Header,
+			SideBar
+		}
+	})
+	export default class Default extends Vue {
+		sideBarOpen = false
 
-	openSideBar(): void {
-		this.sideBarOpen = !this.sideBarOpen
+		openSideBar(): void {
+			this.sideBarOpen = !this.sideBarOpen
+		}
 	}
-}
 </script>

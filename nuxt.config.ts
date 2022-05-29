@@ -1,5 +1,7 @@
-import { NuxtConfig } from "@nuxt/types"
 import colors from "vuetify/lib/util/colors"
+
+import { NuxtConfig } from "@nuxt/types"
+
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin"
 
 const config: Omit<NuxtConfig, "env"> = {
@@ -33,6 +35,7 @@ const config: Omit<NuxtConfig, "env"> = {
   plugins: [
       "plugins/filters",
       "plugins/api-clients",
+      "plugins/authorization",
       "plugins/event-bus"
   ],
 

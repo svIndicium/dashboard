@@ -1,6 +1,6 @@
 import { merge } from "lodash-es"
 
-import baseTranslations from "@svindicium/indicium-components/i18n/nl-NL"
+import baseTranslations from "@svindicium/components/i18n/nl-NL"
 
 const translations = {
     name: {

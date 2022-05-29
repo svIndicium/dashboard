@@ -1,5 +1,7 @@
 import type { ActionTree, GetterTree, MutationTree } from "vuex"
-import { User } from "@svindicium/indicium-components/api/models/user"
+
+import { User } from "@svindicium/components/api/models/user"
+
 import { RootState } from "~/store/index"
 
 export enum USER_GETTERS {

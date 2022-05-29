@@ -8,6 +8,7 @@
 <script lang="ts">
 	import Vue from "vue"
 	import Component from "vue-class-component"
+
 	import WelcomeWidget from "~/components/ui/dashboard/widget/WelcomeWidget.vue"
 	import ComingEventsWidget from "~/components/ui/dashboard/widget/ComingEventsWidget.vue"
 
@@ -18,5 +19,5 @@
 		}
 	})
 	export default class Index extends Vue {
-}
+	}
 </script>

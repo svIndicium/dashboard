@@ -29,6 +29,7 @@
 	import Component from "vue-class-component"
 	import { PropSync } from "vue-property-decorator"
 	import { namespace } from "vuex-class"
+
 	import { Namespaces } from "~/store/configuration"
 	import { UI_GETTERS } from "~/store/ui"
 	import { SidebarItem } from "~/components/ui/layout/index"
